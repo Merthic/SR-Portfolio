@@ -1,20 +1,34 @@
 $(document).ready(function () {
     $('.text_container').animate({
-        'marginTop': "+=100px",
+        'marginTop': "+=100px"
+    }, 0);
+
+    $('.header_name, .header_text').animate({
         opacity: 0
     }, 0);
 
     $('.case_container, .contact_container').animate({
-        'marginTop': "+=200px",
+        'marginTop': "+=100px",
+        opacity: 0
+    }, 0);
+
+    $('.mywork_btn').animate({
         opacity: 0
     }, 0);
 
     $('.text_container').stop().delay(300).animate({
-        'marginTop' : "-=100px",
-        opacity: 1,
+        'marginTop' : "-=100px"
     }, 2000);
 
-    $('.mywork_btn').stop().delay(700).animate({
+    $('.header_name').stop().delay(300).animate({
+        opacity: 1
+    }, 2000);
+
+    $('.header_text').stop().delay(1300).animate({
+        opacity: 1
+    }, 2000);
+
+    $('.mywork_btn').stop().delay(2300).animate({
         opacity: 1
     }, 1000);
 
@@ -23,6 +37,15 @@ $(document).ready(function () {
     });
 
     $('html, body').animate({scrollTop: 0}, 100);
+
+    $(function(){
+        setTimeout(function(){
+            $('html, body')
+                .css({
+                    'overflow-y': 'auto'
+                })
+        }, 3000);
+    });
 
     setTimeout(function () {
         window.wasScrolled = false;
@@ -47,7 +70,7 @@ $(document).ready(function () {
         $(window).scroll(function () {
             if ($('.contact_container ').isInViewport() && contact_animated !== true) {
                 $('.contact_container').stop().animate({
-                    'marginTop': "-=200px",
+                    'marginTop': "-=100px",
                     opacity: 1
                 }, 1000);
                 console.log('success.')
@@ -57,7 +80,7 @@ $(document).ready(function () {
 
             if ($('.case_container ').isInViewport() && case_animated !== true) {
                 $('.case_container').stop().animate({
-                    'marginTop': "-=200px",
+                    'marginTop': "-=100px",
                     opacity: 1
                 }, 1000);
                 console.log('success.')
@@ -65,5 +88,5 @@ $(document).ready(function () {
                 this.stop()
             }
         });
-    }, 1000);
+    }, 500);
 });

@@ -1,6 +1,6 @@
 html {
     font-family: Segoe UI, sans-serif;
-    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -57,20 +57,9 @@ h4 {
 }
 
 .header_container {
-    max-height: 56.25vw;
-    height: 100vh;
     width: 100vw;
-}
-
-.left_header {
-    background-color: #1A2343;
-    width: 50vw;
-    height: 100%;
+    height: 100vh;
     padding: 5vw;
-    float: left;
-}
-
-.right_header {
     background: url("/assets/img/bg.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -79,7 +68,8 @@ h4 {
 }
 
 .text_container {
-    margin-top: 50vh;
+    display: block;
+    margin: 25vh auto auto;
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -102,8 +92,18 @@ h4 {
 .mywork_btn {
     background-color: #FFF;
     margin: 15vh auto auto;
-    width: 14vw;
+    width: 10vw;
     cursor: pointer;
+
+    -webkit-transition: transform .5s ease-in;
+    -moz-transition: transform .5s ease-in;
+    -ms-transition: transform .5s ease-in;
+    -o-transition: transform .5s ease-in;
+    transition: transform .5s ease-in;
+}
+
+.mywork_btn:hover {
+    transform: scale(1.05);
 }
 
 .mywork_btn_text {
@@ -132,6 +132,7 @@ h4 {
     float: left;
     margin-left: 5.5vw;
     border: 1px solid #1A2343;
+    position: relative;
 }
 
 .case_image {
@@ -139,6 +140,17 @@ h4 {
     width: 100%;
     height: 11.25vw;
     margin-bottom: 4vh;
+
+    -webkit-transition: all .5s ease-in;
+    -moz-transition: all .5s ease-in;
+    -ms-transition: all .5s ease-in;
+    -o-transition: all .5s ease-in;
+    transition: all .5s ease-in;
+}
+
+.cases_container .case_image:hover {
+    transform: scale(1.5);
+    margin-bottom: 8vh;
 }
 
 .case_title {
@@ -152,8 +164,19 @@ h4 {
 
 .cases_container .see_more {
     color: #a9a9a9;
-    margin: 7vh 1vw 0 1vw;
-    float: right;
+    position: absolute;
+    bottom: 0;
+    right: 1vw;
+
+    -webkit-transition: transform .5s ease-in;
+    -moz-transition: transform .5s ease-in;
+    -ms-transition: transform .5s ease-in;
+    -o-transition: transform .5s ease-in;
+    transition: transform .5s ease-in;
+}
+
+.cases_container .see_more:hover {
+    transform: scale(1.2);
 }
 
 .contact_container {
@@ -184,6 +207,16 @@ h4 {
     padding: 0.5vh 1vh 0;;
     width: 30%;
     float: right;
+
+    -webkit-transition: transform .5s ease-in;
+    -moz-transition: transform .5s ease-in;
+    -ms-transition: transform .5s ease-in;
+    -o-transition: transform .5s ease-in;
+    transition: transform .5s ease-in;
+}
+
+.email_btn:hover {
+    transform: scale(1.05);
 }
 
 .email_btn_text {
